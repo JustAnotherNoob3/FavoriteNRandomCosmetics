@@ -84,7 +84,7 @@ namespace Utils
                     cornerB = PlayerPrefsUtils.GetValue<bool>("RandomizeCornerB") || randomize? GetRandomId(DecorationType.CornerB) : Service.Home.UserService.UserInfo.CornerDecorationBSelection,
                     cornerC = PlayerPrefsUtils.GetValue<bool>("RandomizeCornerC") || randomize? GetRandomId(DecorationType.CornerC) : Service.Home.UserService.UserInfo.CornerDecorationCSelection,
                     cornerD = PlayerPrefsUtils.GetValue<bool>("RandomizeCornerD") || randomize? GetRandomId(DecorationType.CornerD) : Service.Home.UserService.UserInfo.CornerDecorationDSelection,
-                    deathAnimation = PlayerPrefsUtils.GetValue<bool>("RandomizeDeathAnimation") ? GetRandomId(DecorationType.DeathAnimation) : Service.Home.UserService.UserInfo.CharacterSelection,
+                    deathAnimation = PlayerPrefsUtils.GetValue<bool>("RandomizeDeathAnimation") ? GetRandomId(DecorationType.DeathAnimation) : Service.Home.UserService.UserInfo.DeathAnimationSelection,
                     streamerMode = Service.Home.UserService.UserInfo.StreamerMode,
                     increaseScrollEquip1 = Service.Home.UserService.UserInfo.IncreaseScrollEquip1,
                     increaseScrollEquip2 = Service.Home.UserService.UserInfo.IncreaseScrollEquip2,

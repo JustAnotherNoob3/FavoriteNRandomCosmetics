@@ -23,6 +23,7 @@ namespace Patchs
         [HarmonyPostfix]
         public static void ChangeIfNotFavorite()
         {
+            if (ModSettings.GetBool("Randomize in-between games")) { OtherUtils.RandomizeSkinsNPet(); Console.WriteLine("Randomizing selections"); return;}
             if (!ModSettings.GetBool("Only the skins i want!")) return;
             string[] skinsString = PlayerPrefsUtils.GetValue<string>("FavoriteCharacter").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
             if (skinsString.Length == 0) return;
@@ -63,7 +64,7 @@ namespace Patchs
                     return;
                 }
             }
-            if (ModSettings.GetBool("Randomize in-between games")) { OtherUtils.RandomizeSkinsNPet(); Console.WriteLine("Randomizing selections"); }
+            
         }
 
 
