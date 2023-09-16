@@ -1,0 +1,34 @@
+{
+    "HarmonyId": "JAN.favoritenrandom",
+    "DisplayName": "Favorite n Random Cosmetics",
+    "Authors": [
+      "JAN"
+    ],
+    "Description": "Allows for the easy randomization of only certain cosmetics through the favorite system, just right-click them in the Personalize page. Also allowing to only randomize the categories you want.",
+    "Version": "1.0.0",
+    "RequiredMods": [],
+    "Settings": {
+        "CheckboxSettings": [
+      
+            {
+              "Name": "Randomize in-between games",
+              "Description": "Will randomize character and pet when the game finishes, they need to be indicated they have to be randomized.",
+              "DefaultValue": true,
+              "AvailableInGame": false
+            },
+            {
+              "Name": "Only the skins i want!",
+              "Description": "Will change to the first available favorited skin when your chosen skin gets taken in a lobby. Favorited skins are ordered by date of being chosen as a favorite.",
+              "DefaultValue": true,
+              "AvailableInGame": false
+            },
+            {
+              "Name": "Just randomize everything.",
+              "Description": "Will randomize every single cosmetic category. Not scrolls.",
+              "DefaultValue": false,
+              "AvailableInGame": false
+            }
+        
+        ]
+    }
+  }
