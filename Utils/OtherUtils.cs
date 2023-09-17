@@ -17,6 +17,7 @@ namespace Utils
 {
     class OtherUtils
     {
+        static public PlayerCustomizationSelections pcs = null;
         static public Sprite star = null;
         static public GameObject Random;
         static public bool first = false;
@@ -30,7 +31,7 @@ namespace Utils
                 {
                     System.Random r = new();
                     string[] favorites = PlayerPrefsUtils.GetValue<string>("FavoriteCharacter").Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries);
-                    if (favorites.Length > 0)
+                    if (favorites.Length > 0 || !ModSettings.GetBool("Do not use favorites"))
                     {
                         string[] pair = favorites[r.Next(0, favorites.Length)].Split('/');
                         charId = Convert.ToInt16(pair[0]);
@@ -94,7 +95,7 @@ namespace Utils
                     decreaseScrollEquip2 = Service.Home.UserService.UserInfo.DecreaseScrollEquip2,
                     decreaseScrollEquip3 = Service.Home.UserService.UserInfo.DecreaseScrollEquip3
                 };
-                Service.Home.UserService.PlayerCustomizations.Set(selections);
+                pcs = selections;
                 Service.Home.UserService.SendCustomizationSettings(selections);
         }
         public static void RandomizeSkinsNPet(){
@@ -106,7 +107,7 @@ namespace Utils
                 {
                     System.Random r = new();
                     string[] favorites = PlayerPrefsUtils.GetValue<string>("FavoriteCharacter").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                    if (favorites.Length > 0)
+                    if (favorites.Length > 0 )
                     {
                         if(!ModSettings.GetBool("Only the skins i want!")){
                             HashSet<int> chars = GetUsedSkins();
@@ -120,14 +121,25 @@ namespace Utils
                             }
                             if(availableSkins.Count > 0){
                                 skinId = availableSkins[r.Next(0, availableSkins.Count)];
+                                int petIds = PlayerPrefsUtils.GetValue<bool>("RandomizePet") || randomize ? GetRandomId(DecorationType.Pet) : Service.Home.UserService.UserInfo.PetSelection;
+                        Service.Home.Customizations.myCustomizationSelections.Data.playerPosition = Pepper.GetMyPosition();
+                        Service.Home.Customizations.myCustomizationSelections.Data.skinId = skinId;
+                        Service.Home.Customizations.myCustomizationSelections.Data.characterId = charId;
+                        Service.Game.Network.Send(new PlayerCustomizationsMessage(skinId, petIds));
+                        return;
                             }
-                        }else {
+                        }else if(!ModSettings.GetBool("Do not use favorites")){
                             string[] pair = favorites[r.Next(0, favorites.Length)].Split('/');
                             skinId = Convert.ToInt16(pair[1]);
+                            int petIds = PlayerPrefsUtils.GetValue<bool>("RandomizePet") || randomize ? GetRandomId(DecorationType.Pet) : Service.Home.UserService.UserInfo.PetSelection;
+                            Service.Home.Customizations.myCustomizationSelections.Data.playerPosition = Pepper.GetMyPosition();
+                            Service.Home.Customizations.myCustomizationSelections.Data.skinId = skinId;
+                            Service.Home.Customizations.myCustomizationSelections.Data.characterId = charId;
+                            Service.Game.Network.Send(new PlayerCustomizationsMessage(skinId, petIds));
+                            return;
                         }
+                        
                     }
-                    else
-                    {
                         List<int> i = Service.Home.UserService.Inventory.GetItems(ItemTypeCategory.Character).Keys.ToList();
                         charId = i[r.Next(0, i.Count)];
 
@@ -151,7 +163,6 @@ namespace Utils
                         {
                             skinId = charId;
                         }
-                    }
                 }
                 int petId = PlayerPrefsUtils.GetValue<bool>("RandomizePet") || randomize ? GetRandomId(DecorationType.Pet) : Service.Home.UserService.UserInfo.PetSelection;
                 Service.Home.Customizations.myCustomizationSelections.Data.playerPosition = Pepper.GetMyPosition();
@@ -179,7 +190,7 @@ namespace Utils
         {
             System.Random r = new();
             string[] favorites = PlayerPrefsUtils.GetValue<string>("Favorite" + type.ToString()).Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries);
-            if (favorites.Length > 0)
+            if (favorites.Length > 0 || !ModSettings.GetBool("Do not use favorites"))
             {
                 return Convert.ToInt16(favorites[r.Next(0, favorites.Length)]);
             }

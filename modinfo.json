@@ -5,7 +5,7 @@
       "JAN"
     ],
     "Description": "Allows for the easy randomization of only certain cosmetics through the favorite system, just right-click them in the Personalize page. Also allowing to only randomize the categories you want.",
-    "Version": "1.0.0",
+    "Version": "0.9.0",
     "RequiredMods": [],
     "Settings": {
         "CheckboxSettings": [
@@ -25,6 +25,12 @@
             {
               "Name": "Just randomize everything.",
               "Description": "Will randomize every single cosmetic category. Not scrolls.",
+              "DefaultValue": false,
+              "AvailableInGame": false
+            },
+            {
+              "Name": "Do not use favorites",
+              "Description": "Will randomize without taking into account favorites. \"Only the skins i want!\" will take priority.",
               "DefaultValue": false,
               "AvailableInGame": false
             }
