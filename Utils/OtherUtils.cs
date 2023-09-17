@@ -31,7 +31,7 @@ namespace Utils
                 {
                     System.Random r = new();
                     string[] favorites = PlayerPrefsUtils.GetValue<string>("FavoriteCharacter").Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries);
-                    if (favorites.Length > 0 || !ModSettings.GetBool("Do not use favorites"))
+                    if (favorites.Length > 0 && !ModSettings.GetBool("Do not use favorites"))
                     {
                         string[] pair = favorites[r.Next(0, favorites.Length)].Split('/');
                         charId = Convert.ToInt16(pair[0]);
@@ -109,7 +109,7 @@ namespace Utils
                     string[] favorites = PlayerPrefsUtils.GetValue<string>("FavoriteCharacter").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
                     if (favorites.Length > 0 )
                     {
-                        if(!ModSettings.GetBool("Only the skins i want!")){
+                        if(ModSettings.GetBool("Only the skins i want!")){
                             HashSet<int> chars = GetUsedSkins();
                             List<int> availableSkins = new();
                             foreach(string favorite in favorites){
@@ -190,7 +190,7 @@ namespace Utils
         {
             System.Random r = new();
             string[] favorites = PlayerPrefsUtils.GetValue<string>("Favorite" + type.ToString()).Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries);
-            if (favorites.Length > 0 || !ModSettings.GetBool("Do not use favorites"))
+            if (favorites.Length > 0 && !ModSettings.GetBool("Do not use favorites"))
             {
                 return Convert.ToInt16(favorites[r.Next(0, favorites.Length)]);
             }

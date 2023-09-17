@@ -13,7 +13,7 @@ namespace Patchs
     [HarmonyPatch(typeof(HomeSceneController), "Start")]
     class HomeScene
     {
-        static public void Postfix()
+        static public void Prefix()
         {
             OtherUtils.RandomizeSelections(); Console.WriteLine("Randomizing selections");
         }
