@@ -11,6 +11,7 @@ using System.Linq;
 using Server.Shared.Messages;
 using SML;
 using Server.Shared.Info;
+using System.Reflection;
 
 namespace Utils
 {
@@ -184,7 +185,9 @@ namespace Utils
             }
             else
             {
-                List<int> i = GetItems(type).Keys.ToList();
+                Dictionary<int, int> objs = GetItems(type);
+                if(objs == null) return 0;
+                List<int> i = objs.Keys.ToList();
                 if (i.Count > 0)
                 {
                     return i[r.Next(0, i.Count)];
