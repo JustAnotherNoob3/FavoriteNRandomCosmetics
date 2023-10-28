@@ -91,9 +91,13 @@ namespace Utils
                     increaseScrollEquip1 = Service.Home.UserService.UserInfo.IncreaseScrollEquip1,
                     increaseScrollEquip2 = Service.Home.UserService.UserInfo.IncreaseScrollEquip2,
                     increaseScrollEquip3 = Service.Home.UserService.UserInfo.IncreaseScrollEquip3,
+                    increaseScrollEquip4 = Service.Home.UserService.UserInfo.IncreaseScrollEquip4,
+                    increaseScrollEquip5 = Service.Home.UserService.UserInfo.IncreaseScrollEquip5,
                     decreaseScrollEquip1 = Service.Home.UserService.UserInfo.DecreaseScrollEquip1,
                     decreaseScrollEquip2 = Service.Home.UserService.UserInfo.DecreaseScrollEquip2,
-                    decreaseScrollEquip3 = Service.Home.UserService.UserInfo.DecreaseScrollEquip3
+                    decreaseScrollEquip3 = Service.Home.UserService.UserInfo.DecreaseScrollEquip3,
+                    decreaseScrollEquip4 = Service.Home.UserService.UserInfo.DecreaseScrollEquip4,
+                    decreaseScrollEquip5 = Service.Home.UserService.UserInfo.DecreaseScrollEquip5
                 };
                 pcs = selections;
                 Service.Home.UserService.SendCustomizationSettings(selections);
@@ -166,8 +170,8 @@ namespace Utils
                 }
                 int petId = PlayerPrefsUtils.GetValue<bool>("RandomizePet") || randomize ? GetRandomId(DecorationType.Pet) : Service.Home.UserService.UserInfo.PetSelection;
                 Service.Home.Customizations.myCustomizationSelections.Data.playerPosition = Pepper.GetMyPosition();
-                Service.Home.Customizations.myCustomizationSelections.Data.skinId = skinId;
-                Service.Home.Customizations.myCustomizationSelections.Data.characterId = charId;
+                        Service.Home.Customizations.myCustomizationSelections.Data.skinId = skinId;
+                        Service.Home.Customizations.myCustomizationSelections.Data.characterId = charId;
                 Service.Game.Network.Send(new PlayerCustomizationsMessage(skinId, petId));
         }
         public static HashSet<int> GetUsedSkins(){
