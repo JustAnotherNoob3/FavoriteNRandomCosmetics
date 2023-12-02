@@ -2,10 +2,10 @@
     "HarmonyId": "JAN.favoritenrandom",
     "DisplayName": "Favorite n Random Cosmetics",
     "Authors": [
-      "JAN"
+      "JustAnotherNoob"
     ],
     "Description": "Allows for the easy randomization of only certain cosmetics through the favorite system, just right-click them in the Personalize page. Also allowing to only randomize the categories you want.",
-    "Version": "1.0.1",
+    "Version": "1.0.2",
     "RequiredMods": [],
     "Settings": {
         "CheckboxSettings": [

@@ -27,8 +27,9 @@ namespace Patchs
 			__instance.petWrapper.SwapWithPet(data.petId, true);
 			__instance.houseSpot.SetHouseIsSpawned(data.houseId);
 			__instance.houseSpot.groundSpot.SetIsSpawned(data.pathwaySelection, data);
-            __instance.houseSpot.lawnA.SetIsSpawned(data.lawnDecorationA, Service.Home.Decorations.GetLawnADecorations().GetElement(data.lawnDecorationA));
-			__instance.houseSpot.lawnB.SetIsSpawned(data.lawnDecorationB, Service.Home.Decorations.GetLawnBDecorations().GetElement(data.lawnDecorationB));
+            __instance.houseSpot.lawnA.SetIsSpawned(data.lawnDecorationA, Service.Home.Decorations.GetPropDecorationByType(DecorationType.Lawn_DecorationB, data.lawnDecorationA));
+			__instance.houseSpot.lawnB.SetIsSpawned(data.lawnDecorationB, Service.Home.Decorations.GetPropDecorationByType(DecorationType.Lawn_DecorationB, data.lawnDecorationB));
+            __instance.ForceDeathAnimationUpdate();
             return false;
         }
         
