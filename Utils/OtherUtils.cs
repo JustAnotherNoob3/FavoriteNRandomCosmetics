@@ -42,14 +42,14 @@ namespace Utils
                         List<int> i = Service.Home.UserService.Inventory.GetItems(ItemTypeCategory.Character).Keys.ToList();
                         charId = i[r.Next(0, i.Count)];
 
-                        List<CharacterModel> skins = Service.Game.Cast.GetSkinsForCharacter(charId);
+                        List<CharacterAsset> skins = Service.Game.Cast.GetSkinsForCharacter(charId);
                         if (skins.Count > 1)
                         {
-                            using List<CharacterModel>.Enumerator enumerator = skins.GetEnumerator();
+                            using List<CharacterAsset>.Enumerator enumerator = skins.GetEnumerator();
                             List<int> ints = new();
                             while (enumerator.MoveNext())
                             {
-                                CharacterModel characterModel = enumerator.Current;
+                                CharacterAsset characterModel = enumerator.Current;
 
                                 if (Service.Home.UserService.Inventory.OwnsItem(ItemTypeCategory.CharacterSkin, characterModel.skinId))
                                 {
@@ -147,14 +147,14 @@ namespace Utils
                         List<int> i = Service.Home.UserService.Inventory.GetItems(ItemTypeCategory.Character).Keys.ToList();
                         charId = i[r.Next(0, i.Count)];
 
-                        List<CharacterModel> skins = Service.Game.Cast.GetSkinsForCharacter(charId);
+                        List<CharacterAsset> skins = Service.Game.Cast.GetSkinsForCharacter(charId);
                         if (skins.Count > 1)
                         {
-                            using List<CharacterModel>.Enumerator enumerator = skins.GetEnumerator();
+                            using List<CharacterAsset>.Enumerator enumerator = skins.GetEnumerator();
                             List<int> ints = new();
                             while (enumerator.MoveNext())
                             {
-                                CharacterModel characterModel = enumerator.Current;
+                                CharacterAsset characterModel = enumerator.Current;
 
                                 if (Service.Home.UserService.Inventory.OwnsItem(ItemTypeCategory.CharacterSkin, characterModel.skinId))
                                 {
@@ -227,13 +227,13 @@ namespace Utils
         {
             if (decorationType == DecorationType.Character)
             {
-                List<CharacterModel> skins = Service.Game.Cast.GetSkinsForCharacter(decorId);
+                List<CharacterAsset> skins = Service.Game.Cast.GetSkinsForCharacter(decorId);
                 if (skins.Count > 1)
                 {
-                    using List<CharacterModel>.Enumerator enumerator = skins.GetEnumerator();
+                    using List<CharacterAsset>.Enumerator enumerator = skins.GetEnumerator();
                     while (enumerator.MoveNext())
                     {
-                        CharacterModel characterModel = enumerator.Current;
+                        CharacterAsset characterModel = enumerator.Current;
                         if (Service.Home.UserService.Inventory.OwnsItem(ItemTypeCategory.CharacterSkin, characterModel.skinId) && !characterModel.isBaseSkin)
                         {
                             return true;
