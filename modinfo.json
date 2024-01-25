@@ -7,6 +7,7 @@
     "Description": "Allows for the easy randomization of only certain cosmetics through the favorite system, just right-click them in the Personalize page. Also allowing to only randomize the categories you want.",
     "Version": "1.0.3",
     "RequiredMods": [],
+    "Discord" : "https://discord.gg/ht8ttc3R8E",
     "Settings": {
         "CheckboxSettings": [
       
