@@ -5,7 +5,7 @@
       "JustAnotherNoob"
     ],
     "Description": "Allows for the easy randomization of only certain cosmetics through the favorite system, just right-click them in the Personalize page. Also allowing to only randomize the categories you want.",
-    "Version": "1.0.3",
+    "Version": "1.1.0",
     "RequiredMods": [],
     "Discord" : "https://discord.gg/ht8ttc3R8E",
     "Settings": {
@@ -33,6 +33,12 @@
               "Name": "Do not use favorites",
               "Description": "Will randomize without taking into account favorites. \"Only the skins i want!\" will take priority.",
               "DefaultValue": false,
+              "AvailableInGame": false
+            },
+            {
+              "Name": "Randomize Map In Home",
+              "Description": "Will randomize the map (if set to being randomized) whenever you return to home.",
+              "DefaultValue": true,
               "AvailableInGame": false
             }
         

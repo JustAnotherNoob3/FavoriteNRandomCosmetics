@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Apps\\JAN's stuff\\ToS 2\\FavoriteNRandomCosmetics2\\FavoriteNRandomCosmetics2.csproj": {}
+    "C:\\Users\\Eze\\Documents\\GitHub\\FavoriteNRandomCosmetics\\FavoriteNRandomCosmetics2.csproj": {}
   },
   "projects": {
-    "D:\\Apps\\JAN's stuff\\ToS 2\\FavoriteNRandomCosmetics2\\FavoriteNRandomCosmetics2.csproj": {
+    "C:\\Users\\Eze\\Documents\\GitHub\\FavoriteNRandomCosmetics\\FavoriteNRandomCosmetics2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Apps\\JAN's stuff\\ToS 2\\FavoriteNRandomCosmetics2\\FavoriteNRandomCosmetics2.csproj",
+        "projectUniqueName": "C:\\Users\\Eze\\Documents\\GitHub\\FavoriteNRandomCosmetics\\FavoriteNRandomCosmetics2.csproj",
         "projectName": "FavoriteNRandomCosmetics2",
-        "projectPath": "D:\\Apps\\JAN's stuff\\ToS 2\\FavoriteNRandomCosmetics2\\FavoriteNRandomCosmetics2.csproj",
+        "projectPath": "C:\\Users\\Eze\\Documents\\GitHub\\FavoriteNRandomCosmetics\\FavoriteNRandomCosmetics2.csproj",
         "packagesPath": "C:\\Users\\Eze\\.nuget\\packages\\",
-        "outputPath": "D:\\Apps\\JAN's stuff\\ToS 2\\FavoriteNRandomCosmetics2\\obj\\",
+        "outputPath": "C:\\Users\\Eze\\Documents\\GitHub\\FavoriteNRandomCosmetics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\Apps\\JAN's stuff\\ToS 2\\FavoriteNRandomCosmetics2\\NuGet.Config",
+          "C:\\Users\\Eze\\Documents\\GitHub\\FavoriteNRandomCosmetics\\NuGet.Config",
           "C:\\Users\\Eze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

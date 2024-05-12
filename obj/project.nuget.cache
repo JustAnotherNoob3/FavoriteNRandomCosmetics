@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2hr6pTjDEAQxspjfF9hAsnzOL1ucrFMzk1VBVTCsS/XjQoS5GVIGDYSAcrT51HjVs3nGlGDudoTwwLPc/i6BCw==",
+  "dgSpecHash": "qozWI/sUwDshlOr6EyChS18hZbvIbXS2to60dRPd1RDoH43URE6xRJvzzDj1bAGvyIJFhzJPdLKtCW/pteowsw==",
   "success": true,
-  "projectFilePath": "D:\\Apps\\JAN's stuff\\ToS 2\\FavoriteNRandomCosmetics2\\FavoriteNRandomCosmetics2.csproj",
+  "projectFilePath": "C:\\Users\\Eze\\Documents\\GitHub\\FavoriteNRandomCosmetics\\FavoriteNRandomCosmetics2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eze\\.nuget\\packages\\harmonyx\\2.10.1\\harmonyx.2.10.1.nupkg.sha512",
     "C:\\Users\\Eze\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

@@ -12,7 +12,6 @@ namespace Buttons
         public int skinId;
         public GameObject star;
         public string decorationType;
-
         public void Start()
         {
             isFavorite = IsFavorite();

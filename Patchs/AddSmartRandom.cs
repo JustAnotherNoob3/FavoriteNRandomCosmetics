@@ -13,10 +13,13 @@ namespace Patchs
         [HarmonyPrefix]
         public static void AddButton(DecorationsPanel __instance)
         {
+            if(OtherUtils.check) return;
+            OtherUtils.check = true;
             OtherUtils.first = false;
             GameObject anonReference = __instance.transform.GetChild(0).gameObject;
             GameObject SmartRandomSelection = Object.Instantiate(anonReference, __instance.transform);
             OtherUtils.Random = SmartRandomSelection;
+            
             SmartRandomSelection.AddComponent<SmartRandomButtonBehaviour>();
         }
     }

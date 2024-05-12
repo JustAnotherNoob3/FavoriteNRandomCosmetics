@@ -13,6 +13,8 @@ namespace Buttons
     {
         public DecorationType cat = DecorationType.Character;
         public ToggleCustomClick button;
+        public TextMeshProUGUI tmp;
+        public bool waitForStart = false;
         public void Start()
         {
             gameObject.GetComponentInChildren<TooltipTrigger>().NonLocalizedString = "Right click any item to favorite them! Randomization will occur only taking into account favorite items, or every item if none are favorites.";
@@ -22,14 +24,16 @@ namespace Buttons
             RectTransform anonTransform = anonReference.GetComponent<RectTransform>();
             transform.localPosition = anonReference.transform.localPosition - new Vector3(0, anonTransform.rect.height - 3.5f, 0f);
             button.gameObject.name = "Randomize Checkbox";
-            button = GetComponentInChildren<ToggleCustomClick>();
+            tmp = gameObject.GetComponentInChildren<TextMeshProUGUI>();
+            waitForStart = true;
             UpdateButton(cat);
         }
         public void UpdateButton(DecorationType category)
         {
+            if(!waitForStart) return;
             if (OtherUtils.Skip(category)) { gameObject.SetActive(false); return; }
             cat = category;
-            gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Randomize " + category.ToString().Replace("_", " ");
+            tmp.text = "Randomize " + category.ToString().Replace("_", " ");
             ResetButton();
         }
         public void ResetButton()

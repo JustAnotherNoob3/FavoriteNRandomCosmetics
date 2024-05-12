@@ -26,7 +26,6 @@ namespace Patchs
             obj.decorationType = "Character";
             obj.decorationId = Service.Game.Cast.GetCharacterIdBySkinId(skinId);
             obj.skinId = skinId;
-
         }
     }
 }
