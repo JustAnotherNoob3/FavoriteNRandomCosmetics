@@ -13,3 +13,19 @@ D:\Apps\JAN's stuff\ToS 2\FavoriteNRandomCosmetics2\obj\Debug\netstandard2.0\Fav
 D:\Apps\JAN's stuff\ToS 2\FavoriteNRandomCosmetics2\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.dll
 D:\Apps\JAN's stuff\ToS 2\FavoriteNRandomCosmetics2\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.pdb
 D:\Apps\JAN's stuff\ToS 2\FavoriteNRandomCosmetics2\bin\Debug\netstandard2.0\SalemModLoader.dll
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\bin\Debug\netstandard2.0\FavoriteNRandomCosmetics2.deps.json
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\bin\Debug\netstandard2.0\FavoriteNRandomCosmetics2.dll
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\bin\Debug\netstandard2.0\FavoriteNRandomCosmetics2.pdb
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\bin\Debug\netstandard2.0\Assembly-CSharp.dll
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\bin\Debug\netstandard2.0\SalemModLoader.dll
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\bin\Debug\netstandard2.0\Unity.TextMeshPro.dll
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\bin\Debug\netstandard2.0\UnityEngine.UI.dll
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.csproj.AssemblyReference.cache
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.AssemblyInfoInputs.cache
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.AssemblyInfo.cs
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.csproj.CoreCompileInputs.cache
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.sourcelink.json
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.csproj.CopyComplete
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.dll
+C:\Users\Eze\Documents\GitHub\FavoriteNRandomCosmetics\obj\Debug\netstandard2.0\FavoriteNRandomCosmetics2.pdb

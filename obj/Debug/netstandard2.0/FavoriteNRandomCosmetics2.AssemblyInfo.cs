@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("My first plugin")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6123ffcea05295e565317ac0370682cb094abb7")]
 [assembly: System.Reflection.AssemblyProductAttribute("FavoriteNRandomCosmetics2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FavoriteNRandomCosmetics2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
